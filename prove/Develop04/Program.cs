@@ -1,18 +1,12 @@
 using Develop04;
+using System;
 
+// To exceed requirements i kept track of all the activites that the user completes, and at the very end it lists how many times they participated in each activity.
 class Program
 {
     static void Main(string[] args)
     {
-        Assignment assignment = new Assignment("Samuel Bennett", "Multiplication");
-        Console.WriteLine(assignment.GetSummary());
-
-        MathAssignment mathAssignment = new MathAssignment("Roberto Rodriguez", "Fractions", "7.3", "8 - 19");
-        Console.WriteLine(mathAssignment.GetSummary());
-        Console.WriteLine(mathAssignment.GetHomeworkList());
-
-        WritingAssignment writingAssignment = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
-        Console.WriteLine(writingAssignment.GetSummary());
-        Console.WriteLine(writingAssignment.GetWritingInformation());
+        Activity activity = new Activity();
+        activity.RunActivityManager();
     }
 }
